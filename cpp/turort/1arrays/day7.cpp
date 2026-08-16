@@ -65,6 +65,27 @@ void maxSum(){
     cout<<maxi;
     
 }
+
+
+// Maximum Product Subarray
+void maxProduct(){
+    vector<int> nums={2,3,-2,4};
+    int maxp=INT_MIN;
+    int product=1;
+
+    for(auto it: nums){
+            product *= it;
+            maxp = max(product,maxp);
+            if(it==0) product=1;
+        }
+    product =1;
+    for(int i =nums.size()-1;i>=0;i--){
+            product *= nums[i];
+            maxp = max(product,maxp);
+            if(nums[i]==0) product=1;
+        }
+}
+
 int main(){
     // wiggleSort();
     maxSum();
