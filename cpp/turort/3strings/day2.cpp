@@ -15,6 +15,6 @@ int main(){
     stack<int> st;
     st.push(1);
     st.push(2);
-    cout<<st;
+    cout<<st.top();
     return 0;
-}₹
+}
